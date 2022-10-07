@@ -7,11 +7,12 @@ public class Libro {
     private int aNoPublicacion;
     private int identificador;
     private int cantidadEjemplares = 1;
+    private Autor autores;
     
     public Libro(String pNombre, int pIdentificador, Autor pAutor){
         setNombre(pNombre);
         setIdentificador(pIdentificador);
-        
+        setAutor(pAutor);
     }
     
     public void setNombre(String pNombre){
@@ -52,5 +53,13 @@ public class Libro {
     
     public int getCantidadEjemplares(){
         return cantidadEjemplares;
+    }
+    
+    public void setAutor(Autor pAutor){
+        autores = pAutor;
+    }
+    
+    public Autor getAutor(){
+        return autores;
     }
 }
