@@ -40,7 +40,7 @@ public class Libro {
         msg = "\nNombre: " + getNombre();
         msg += "\nEditorial: " + getEditorial();
         msg += "\nAño de publicación: " + getaNoPublicacion();
-        msg += "\nIdefntificador: " + getIdentificador();
+        msg += "\nIdentificador: " + getIdentificador();
         msg += "\nCantidad de ejemplares: " + getCantidadEjemplares();
         return msg;
     }

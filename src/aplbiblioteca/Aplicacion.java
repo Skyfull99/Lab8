@@ -32,6 +32,7 @@ public class Aplicacion{
                             
                             System.out.println("Ingrese el nombre del libro:");
                             String nombre = entrada.nextLine();
+                            nombre = entrada.nextLine();
                             
                             System.out.println("Ingrese la editorial del libro:");
                             String editorial = entrada.nextLine();
@@ -58,6 +59,7 @@ public class Aplicacion{
                             
                             System.out.println("Ingrese el nombre del cliente:");
                             String nombre = entrada.nextLine();
+                            nombre = entrada.nextLine();
                             
                             System.out.println("Ingrese la nacionalidad del cliente:");
                             String nacionalidad = entrada.nextLine();
@@ -80,6 +82,7 @@ public class Aplicacion{
                             
                             System.out.println("Ingrese el nombre del autor:");
                             String nombre = entrada.nextLine();
+                            nombre = entrada.nextLine();
                             
                             System.out.println("Ingrese la nacionalidad del autor:");
                             String nacionalidad = entrada.nextLine();
@@ -122,7 +125,7 @@ public class Aplicacion{
                         }   break;
                     case 5:
                         try{
-                            System.out.println("Ingrese el identificador del libro a buscar: ");
+                            System.out.println("Ingrese el identificador del libro: ");
                             int identificador = entrada.nextInt();
                             biblioteca.buscarLibro(identificador);
                         }
@@ -138,7 +141,7 @@ public class Aplicacion{
                         }   break;
                     case 6:
                         try{
-                            System.out.println("Ingrese la cédula del cliente a buscar:");
+                            System.out.println("Ingrese la cédula del cliente:");
                             int cedula = entrada.nextInt();
                             biblioteca.buscarCliente(cedula);
                         }
@@ -154,7 +157,7 @@ public class Aplicacion{
                         }   break;
                     case 7:
                         try{
-                            System.out.println("Ingrese el identificador del autor a buscar:");
+                            System.out.println("Ingrese el identificador del autor:");
                             int identificador = entrada.nextInt();
                             biblioteca.buscarAutor(identificador);
                         }
