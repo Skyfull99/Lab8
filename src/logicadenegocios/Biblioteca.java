@@ -1,5 +1,8 @@
 package logicadenegocios;
 
+import excepciones.BookAlreadyExistException;
+import excepciones.BookDoesNotExistException;
+import excepciones.ClientAlreadyExistsException;
 import java.util.ArrayList;
 
 public class Biblioteca {

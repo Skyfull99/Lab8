@@ -1,4 +1,4 @@
-package logicadenegocios;
+package excepciones;
 
 import java.io.*;
 

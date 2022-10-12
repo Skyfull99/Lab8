@@ -3,13 +3,13 @@ package logicadenegocios;
 import java.util.Date;
 
 
-public class Prestamos {
+public class Prestamo {
     private Libro libro;
     private Cliente cliente;
     private Date fechaPrestamo;
     private Date fechaEntraga;
     
-    public Prestamos(Libro pLibro, Cliente pCliente){
+    public Prestamo(Libro pLibro, Cliente pCliente){
         this.libro = pLibro;
         this.cliente = pCliente;
     }
