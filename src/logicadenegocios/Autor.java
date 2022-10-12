@@ -5,33 +5,30 @@ public class Autor {
     private int identificador;
     private String nombre;
     private String nacionalidad;
-    
-    public Autor(int pIdentificador, String pNombre){
-        setIdentificador(pIdentificador);
-        setNombre(pNombre);
+
+    public Autor(int identificador, String nombre, String nacionalidad) {
+        this.identificador = identificador;
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
     }
-    
-    public void setIdentificador(int pIdentificador){
-        identificador = pIdentificador;
-    }
-    
-    public int getIdentificador(){
+
+    public int getIdentificador() {
         return identificador;
     }
-    
-    public void setNombre(String pNombre){
-        nombre = pNombre;
-    }
-    
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
-    
-    public void setNacionalidad(String pNacionalidad){
-        nacionalidad = pNacionalidad;
-    }
-    
-    public String getNacionalidad(){
+
+    public String getNacionalidad() {
         return nacionalidad;
+    }
+  
+    public String toString(){
+        String msg;
+        msg = "\nNombre: " + getNombre();
+        msg += "\nNacionalidad: " + getNacionalidad();
+        msg += "\nIdentificador: " + getIdentificador();
+        return msg;
     }
 }
