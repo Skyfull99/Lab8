@@ -2,50 +2,46 @@ package logicadenegocios;
 import java.util.ArrayList;
 
 public class Cliente {
-    private String cedula;
+    private int cedula;
     private String nombre;
-    private String direccion;
-    
-    
-    public String getNombre(){
-        return nombre;
+    private String nacionalidad;
+    private ArrayList<Prestamo> misPrestamos;
+
+    public Cliente(int cedula, String nombre, String nacionalidad) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        misPrestamos = new ArrayList<Prestamo>();
     }
-    
-    public void setNombre(String pNombre){
-        nombre = pNombre;
+  
+    public void registrarNuevoPrestamo(Libro pLibro){
+        Prestamo pPrestamo = new Prestamo(pLibro, this);
+        this.misPrestamos.add(pPrestamo);
     }
-    
-    public String getCedula(){
+
+    public int getCedula() {
         return cedula;
     }
-    
-    public void setCedula(String pCedula){
-        cedula = pCedula;
+
+    public String getNombre() {
+        return nombre;
     }
-    
-    public String getDireccion(){
-        return direccion;
+
+    public String getNacionalidad() {
+        return nacionalidad;
     }
-    
-    public void setDireccion(String pDireccion){
-        direccion = pDireccion;
+
+    public void getMisPrestamos() {
+        for(Prestamo prestamo: misPrestamos){
+            System.out.println(prestamo.toString());
+        }
     }
-    
-    
-    
-    public Cliente (String pNombre, String pCedula, String pDireccion){
-        
+  
+    public String toString(){
+        String msg;
+        msg = "\nNombre: " + getNombre();
+        msg += "\nCedula: " + getCedula();
+        msg += "\nNacionalidad: " + getNacionalidad();
+        return msg;
     }
-    
-    public void registrarNuevoPrestamo (String pNombre, String pCedula, String pDireccion){
-        
-    }
-    
-   // public metodosAccesores (){
-        
-    //}
-    
-  //  public ArrayList<Libro> consultarLibrosConAtrasos (){
-        
-   // }
 }
