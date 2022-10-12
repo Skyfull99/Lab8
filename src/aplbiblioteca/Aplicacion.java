@@ -10,7 +10,7 @@ public class Aplicacion{
     public static void main(String args[]){
         boolean continuar = true;
         Scanner entrada = new Scanner(System.in);
-        Biblioteca biblioteca1 = new Biblioteca("Bibliotec");
+        Biblioteca biblioteca = new Biblioteca("Biblioteca");
         while(continuar){
             try{
                 System.out.println("***Bienvenido a la bibliteca.***");
@@ -32,7 +32,6 @@ public class Aplicacion{
                             
                             System.out.println("Ingrese el nombre del libro:");
                             String nombre = entrada.nextLine();
-                            nombre = entrada.nextLine();
                             
                             System.out.println("Ingrese la editorial del libro:");
                             String editorial = entrada.nextLine();
@@ -40,7 +39,7 @@ public class Aplicacion{
                             System.out.println("Ingrese el año de publicación:");
                             int aNoPublicacion = entrada.nextInt();
                             
-                            biblioteca1.registrarLibro(identificador, nombre, editorial, aNoPublicacion);
+                            biblioteca.registrarLibro(identificador, nombre, editorial, aNoPublicacion);
                         }
                         catch(InputMismatchException e){
                             System.out.println("\nExcepción: " + e);
@@ -59,12 +58,11 @@ public class Aplicacion{
                             
                             System.out.println("Ingrese el nombre del cliente:");
                             String nombre = entrada.nextLine();
-                            nombre = entrada.nextLine();
                             
                             System.out.println("Ingrese la nacionalidad del cliente:");
                             String nacionalidad = entrada.nextLine();
                             
-                            biblioteca1.registrarCliente(cedula, nombre, nacionalidad);
+                            biblioteca.registrarCliente(cedula, nombre, nacionalidad);
                         }
                         catch(InputMismatchException e){
                             System.out.println("\nExcepción: " + e);
@@ -82,12 +80,11 @@ public class Aplicacion{
                             
                             System.out.println("Ingrese el nombre del autor:");
                             String nombre = entrada.nextLine();
-                            nombre = entrada.nextLine();
                             
                             System.out.println("Ingrese la nacionalidad del autor:");
                             String nacionalidad = entrada.nextLine();
                             
-                            biblioteca1.registrarAutor(identificador, nombre, nacionalidad);
+                            biblioteca.registrarAutor(identificador, nombre, nacionalidad);
                         }
                         catch(InputMismatchException e){
                             System.out.println("\nExcepción: " + e);
@@ -106,7 +103,7 @@ public class Aplicacion{
                             System.out.println("Ingrese el identificador del libro:");
                             int identificador = entrada.nextInt();
                             
-                            biblioteca1.prestarLibro(identificador, cedula);
+                            biblioteca.prestarLibro(identificador, cedula);
                         }
                         catch(InputMismatchException e){
                             System.out.println("\nExcepción: " + e);
@@ -127,7 +124,7 @@ public class Aplicacion{
                         try{
                             System.out.println("Ingrese el identificador del libro a buscar: ");
                             int identificador = entrada.nextInt();
-                            biblioteca1.buscarLibro(identificador);
+                            biblioteca.buscarLibro(identificador);
                         }
                         catch(InputMismatchException e){
                             System.out.println("\nExcepción: " + e);
@@ -143,7 +140,7 @@ public class Aplicacion{
                         try{
                             System.out.println("Ingrese la cédula del cliente a buscar:");
                             int cedula = entrada.nextInt();
-                            biblioteca1.buscarCliente(cedula);
+                            biblioteca.buscarCliente(cedula);
                         }
                         catch(InputMismatchException e){
                             System.out.println("\nExcepción: " + e);
@@ -159,7 +156,7 @@ public class Aplicacion{
                         try{
                             System.out.println("Ingrese el identificador del autor a buscar:");
                             int identificador = entrada.nextInt();
-                            biblioteca1.buscarAutor(identificador);
+                            biblioteca.buscarAutor(identificador);
                         }
                         catch(InputMismatchException e){
                             System.out.println("\nExcepción: " + e);
@@ -175,7 +172,7 @@ public class Aplicacion{
             catch(InputMismatchException e){
                 System.out.println("\nExcepción: " + e);
                 entrada.nextLine();
-                System.out.println("Opción inválida");
+                System.out.println("Opción inválida, ingrese una opción valida.");
             }
         }
     }
