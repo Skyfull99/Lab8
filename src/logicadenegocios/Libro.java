@@ -7,59 +7,41 @@ public class Libro {
     private int aNoPublicacion;
     private int identificador;
     private int cantidadEjemplares = 1;
-    private Autor autores;
-    
-    public Libro(String pNombre, int pIdentificador, Autor pAutor){
-        setNombre(pNombre);
-        setIdentificador(pIdentificador);
-        setAutor(pAutor);
+
+    public Libro(String nombre, String editorial, int aNoPublicacion, int identificador) {
+        this.nombre = nombre;
+        this.editorial = editorial;
+        this.aNoPublicacion = aNoPublicacion;
+        this.identificador = identificador;
     }
-    
-    public void setNombre(String pNombre){
-        nombre = pNombre;
-    }
-    
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
-    
-    public void setEditorial(String pEditorial){
-        editorial = pEditorial;
-    }
-    
-    public String getEditorial(){
+
+    public String getEditorial() {
         return editorial;
     }
-    
-    public void setAnoPublicacion(int pAnoPublicacion){
-        aNoPublicacion = pAnoPublicacion;
-    }
-    
-    public int getAnoPublicacion(){
+
+    public int getaNoPublicacion() {
         return aNoPublicacion;
     }
-    
-    public void setIdentificador(int pIdentificador){
-        identificador = pIdentificador;
-    }
-    
-    public int getIdentificador(){
+
+    public int getIdentificador() {
         return identificador;
     }
-    
-    public void setCantidadEjemplares(int pCantEjemplares){
-        cantidadEjemplares = pCantEjemplares;
-    }
-    
-    public int getCantidadEjemplares(){
+
+    public int getCantidadEjemplares() {
         return cantidadEjemplares;
     }
-    
-    public void setAutor(Autor pAutor){
-        autores = pAutor;
-    }
-    
-    public Autor getAutor(){
-        return autores;
+  
+    public String toString(){
+        String msg;
+        msg = "\nNombre: " + getNombre();
+        msg += "\nEditorial: " + getEditorial();
+        msg += "\nAño de publicación: " + getaNoPublicacion();
+        msg += "\nIdefntificador: " + getIdentificador();
+        msg += "\nCantidad de ejemplares: " + getCantidadEjemplares();
+        return msg;
     }
 }
