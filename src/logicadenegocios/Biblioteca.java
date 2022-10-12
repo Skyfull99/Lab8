@@ -1,5 +1,7 @@
 package logicadenegocios;
 
+import excepciones.*;
+
 import excepciones.BookAlreadyExistException;
 import excepciones.BookDoesNotExistException;
 import excepciones.ClientAlreadyExistsException;
@@ -102,16 +104,13 @@ public class Biblioteca {
         }
     }
   
-    public void buscarAutor(int pIdentificador) throws AuthorDoesExistsException{
+    public void buscarAutor(int pIdentificador){
         Autor test = null;
         for(Autor autor : autores){
             if(autor.getIdentificador() == pIdentificador){
                 test = autor;
                 System.out.println(autor.toString());
             }
-        }
-        if(test == null){
-            throw new AuthorDoesExistsException(pIdentificador);
         }
     }
 }
